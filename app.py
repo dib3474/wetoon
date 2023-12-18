@@ -7,7 +7,7 @@ import requests
 client = MongoClient("mongodb+srv://dib3474:1q2w3e4r@cluster0.lurm5gz.mongodb.net/?retryWrites=true&w=majority")
 db = client.wetoon
 
-application = app = Flask(__name__)
+app = Flask(__name__)
 
 
 @app.route('/', methods=["GET"])
@@ -124,4 +124,4 @@ def ranking_kakao_data():
     return jsonify({"result": contents})
 
 if __name__ == "__main__":
-    application.run()
+    app.run()
